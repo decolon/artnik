@@ -1,0 +1,17 @@
+h3 Enter the title of a work that interests you
+br
+
+
+label(for='piece') Piece title
+input(type='text', name='piece', class='search', ng-model='search.name')
+br
+br
+br
+ul
+	li(ng-repeat='piece in pieces | filter:search', class='piecePackage')
+		hr
+		a(class='pieceLink', href='answerQuestion', ng-click='choosePiece(piece)') {{piece.name}}
+		p(class='pieceDescription') {{piece.description}}
+		hr
+
+

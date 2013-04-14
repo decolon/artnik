@@ -1,0 +1,11 @@
+a(href='/pieces/{{pieceId}}', class='floatLeft') Back
+br
+hr
+
+h3 {{comment.short_comment}}
+p {{comment.user_email}}
+p {{comment.user_name}}
+p {{comment.long_comment}}
+p {{comment.rating}}
+
+button(ng-click='like()', ng-disabled='liked') Like

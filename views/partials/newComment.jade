@@ -1,0 +1,22 @@
+a(href='/pieces/{{pieceId}}', class='floatLeft') Back
+br
+hr
+br
+h3 Add a new comment
+
+
+label(for='short_comment') Impression 
+input(type='text', ng-model='short_comment', required, name='short_comment', maxlength='{{maxImpressionLength}}')
+p ({{maxImpressionLength - short_comment.length}})
+
+br
+br
+label(for='long_comment') Tell us more
+textarea(maxlength='{{maxTextAreaLength}}', ng-model='long_comment')
+p ({{maxTextAreaLength - long_comment.length}})
+br
+br
+br
+a(href='pieces/{{pieceId}}', ng-click='submitComment()') Sumbit
+
+

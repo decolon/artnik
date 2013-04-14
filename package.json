@@ -1,0 +1,21 @@
+{
+    "name": "artnik"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "3.0.2"
+    , "jade": "*"
+    , "jasmine-node": "*"
+    , "testacular": "*"
+    , "sequelize": "*"
+    , "moment": "*"
+    , "crypto": "*"
+    , "pg": "0.6.x"
+    , "forever": "*"
+    , "async": "*"
+  },
+  "engines": {
+  	"node": "0.8.x",
+  	"npm": "1.1.x"
+  }
+}

@@ -1,0 +1,18 @@
+h2 Public Thoughts of 
+h2 {{piece.name}}
+br
+br
+h3 {{question.question}}
+br
+br
+ul
+	li(ng-repeat='answer in answers', class='piecePackage')
+		hr
+		p(class='publicThought') {{answer.answer}}
+		hr
+
+br
+br
+br
+a(href='answerQuestion',class='navLink', ng-click='nextQuestion()', ng-show='questionNumber < numQuestions-1') Next Question
+a(href='choosePiece', ,class='navLink', ng-show='questionNumber >= numQuestions-1') Choose another piece

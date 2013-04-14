@@ -1,0 +1,21 @@
+h2 Looking at {{piece.name}}
+br
+br
+br
+p Answer this question for me
+
+h3 {{question.question}}
+
+
+textarea(placeholder = 'What do you think?', ng-model='answerField', ng-disabled='timeAllowed < 1', maxlength=140)
+
+p Characters Left: {{charactersAllowed - answerField.length}}
+
+p(ng-show='timeAllowed > 0') Seconds Left:  {{timeAllowed}} 
+p(ng-show='timeAllowed < 1') No time left
+
+button(ng-disabled='numberAnswers > 3', ng-click='sendAnswer()', class='sendAnswer') Send Answer
+p(ng-show='numberAnswers > 3') Reached maximum number of answers
+p Number answers sent: {{numberAnswers}}
+br
+a(href='publicThoughts', ng-show='numberAnswers > 0 || timeAllowed < 1', class='navLink') Move On

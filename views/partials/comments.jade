@@ -1,0 +1,17 @@
+a(href='/pieces', class='floatLeft') Back
+br
+hr
+label(for='commentSearch') Comment
+input(type='text', name='commentSearch', ng-model='commentSearch.short_comment', value = '', maxlength=140);
+br
+br
+a(href='comment/new/{{piece.id}}') Add Comment
+br
+br
+ul
+  li(ng-repeat="comment in comments | filter:commentSearch | orderBy:'rating':true")
+    br
+    a(href='pieces/{{pieceId}}/{{comment.id}}') {{comment.short_comment}}
+    br
+    hr
+

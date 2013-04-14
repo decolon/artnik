@@ -1,0 +1,7 @@
+label(for='search') Pieces
+input(type='text', name='search', id='pieceSearch', ng-model='search.name', value = '', maxlength=140);
+
+ul
+  li(ng-repeat='piece in pieces|filter:search')
+    br
+    a(href='/pieces/{{piece.id}}') {{piece.name}}
