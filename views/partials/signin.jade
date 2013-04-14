@@ -1,11 +1,11 @@
 h3 Sign In
 form(action='/login', method='post')
 	label(for='email') Email: 
-	input(type='text', name='email', value='dcolon@gmail.com', required, maxlength='20')
+	input(type='text', name='email', required, maxlength='20')
 	br
 	label(for='password') Password: 
-	input(type='password', name='password', value='password', required, maxlength='30')
+	input(type='password', name='password', required, maxlength='30')
 	br
-	input(type='submit', class='submit')
+	input(type='submit', value='Sign In', class='submit')
 br
 
