@@ -43,10 +43,10 @@ var singleton = function singleton(){
 		};
 
 		if(isProduction){
+		  console.log('HHHHHHHHEEEEEEEEEERRRRRRRRRREEEEEEEEEE IN PRODUCTIONNNNNNNNNNNNNNNNNNNNNN');
 			var url = require('url'),
 			dbUrl = url.parse(process.env.DATABASE_URL),
 			authArr = dbUrl.auth.split(':');
-
 			dbOptions.database = dbUrl.path.substring(1);
 			dbOptions.username = authArr[0]; 
 			dbOptions.password = authArr[1];
@@ -55,7 +55,7 @@ var singleton = function singleton(){
 			dbOptions.dialect = 'postgres';
 			dbOptions.protocol = 'postgres';
 
-			sequelize = new Sequelize(dbOptions.name, dbOptions.user, dbOptions.pass, {
+			sequelize = new Sequelize(dbOptions.database, dbOptions.username, dbOptions.password, {
 				host: dbOptions.host,
 				port: dbOptions.port,
 				dialect: dbOptions.dialect,
