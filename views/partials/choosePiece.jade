@@ -11,7 +11,6 @@ ul
 	li(ng-repeat='piece in pieces | filter:search', class='piecePackage')
 		hr
 		a(class='pieceLink', href='answerQuestion', ng-click='choosePiece(piece)') {{piece.name}}
-		p(class='pieceDescription') {{piece.description}}
 		hr
 
 

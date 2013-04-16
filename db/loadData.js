@@ -36,18 +36,6 @@ exports.batchUpload = function(rootPath){
 	convertData(rootPath, 'pieces', function(){
 		loadData(rootPath, 'pieces', function(){
 		  	loadData(rootPath, 'users', function(){
-		  	  dbHelpers.addCommentWithIds('This is a painting', 'no really, it is a cool painting', 1, 1);
-		  	  dbHelpers.addCommentWithIds('The mona lisa is cool', 'beliece me', 2, 1);
-		  	  dbHelpers.addCommentWithIds('This sucks', 'I dont like it', 3, 1);
-		  	  dbHelpers.addCommentWithIds('I think its great now', 'I changed my mind', 3, 1);
-		  	  dbHelpers.addCommentWithIds('Why', 'Am i still looking at this', 4, 1);
-		  	  dbHelpers.addCommentWithIds('Sharks', 'are cooler than this', 5, 1);
-		  	  dbHelpers.addCommentWithIds('I like chocolate', 'no, that was not relevant', 1, 1);
-		  	  dbHelpers.addCommentWithIds('This is sparta', 'and this is greece', 2, 1);
-		  	  dbHelpers.addCommentWithIds('To be', 'or not to be', 3, 1);
-		  	  dbHelpers.addCommentWithIds('we put our hand up', 'na na na na na na', 1, 1);
-		  	  console.log('Data loaded');
-
 			});
 		});
 	});
