@@ -36,6 +36,7 @@ exports.batchUpload = function(rootPath){
 	convertData(rootPath, 'pieces', function(){
 		loadData(rootPath, 'pieces', function(){
 		  	loadData(rootPath, 'users', function(){
+		  	  console.log('Data loaded');
 			});
 		});
 	});
