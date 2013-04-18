@@ -5,9 +5,9 @@ var dbHelpers = require('../db/dbHelpers');
 var dbLoader = require('../db/loadData.js');
 var async = require('async');
 
-dbLoader.deleteAllData(function(){
-	dbLoader.batchUpload('./db/batchUpload');
-});
+//dbLoader.deleteAllData(function(){
+//	dbLoader.batchUpload('./db/batchUpload');
+//});
 
 exports.allPieces = function(req, res){
 	dbHelpers.getAllPieces(function(result){
