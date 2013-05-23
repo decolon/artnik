@@ -5,6 +5,7 @@
   , "dependencies": {
       "express": "3.0.2"
     , "jade": "*"
+    , "nodemon": "*"
     , "jasmine-node": "*"
     , "testacular": "*"
     , "sequelize": "*"

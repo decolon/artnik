@@ -55,7 +55,7 @@ function CommentCtl($scope, $resource, $routeParams){
     like.save({commentId:commentId},{});
     $scope.comment.rating++;
     $scope.liked = true;
-  }
+  };
 }
 CommentCtl.$inject = ['$scope', '$resource', '$routeParams'];
 
@@ -68,10 +68,10 @@ function NewCommentCtl($scope, $resource, $routeParams, $location){
   $scope.maxImpressionLength = 20;
   $scope.maxTextAreaLength = 500;
   $scope.submitComment = function(){
-    if($scope.long_comment == null){
+    if($scope.long_comment === null){
       $scope.long_comment = ' ';
     }
-    if($scope.short_comment == null){
+    if($scope.short_comment === null){
       $scope.short_comment = ' ';
     }
     var newComment = $resource('comment/new');

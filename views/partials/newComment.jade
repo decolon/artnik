@@ -11,12 +11,12 @@ p ({{maxImpressionLength - short_comment.length}})
 
 br
 br
-label(for='long_comment') Tell us more
+label(for='long_comment') Expand on that (if you wish)
 textarea(maxlength='{{maxTextAreaLength}}', ng-model='long_comment')
 p ({{maxTextAreaLength - long_comment.length}})
 br
 br
 br
-a(href='pieces/{{pieceId}}', ng-click='submitComment()') Sumbit
+a(href='pieces/{{pieceId}}', ng-click='submitComment()') Submit
 
 

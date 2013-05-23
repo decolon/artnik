@@ -1,8 +1,8 @@
 //Module dependencies
 //-------------------------------------------------------------------------
-var express = require('express')
-  , http = require('http')
-  , path = require('path');
+var express = require('express');
+var http = require('http');
+var path = require('path');
 
 
 var app = express();
@@ -11,12 +11,12 @@ var app = express();
 var afterDatabaseLoad = function(){
 	routes = require('./routes/index');
 	api = require('./routes/api');
-}
+};
 
 
 app.configure('development', function() {
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-  require('./db/singleton.js').setup('./models','./db/models', afterDatabaseLoad, false); 
+  require('./db/singleton.js').setup('./models','./db/models', afterDatabaseLoad, false);
 });
 
 app.configure('production', function() {
@@ -37,7 +37,7 @@ app.configure(function() {
   app.use(express.methodOverride());
   app.use(express.static(path.join(__dirname, 'public')));
   app.use(function(req, res, next) {
-    if(req.url.match(/^\/test\//) != null) {
+    if(req.url.match(/^\/test\//) !== null) {
       res.sendfile(path.join(__dirname, req.url));
     } else {
       next();

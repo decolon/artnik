@@ -34,14 +34,6 @@ module.exports = {
 		}},
 		date: {type: Seq.STRING, validate:{
       notNull:true,
-      isDate: true,
-      isAlphanumeric:true
-		}},
-		tagline: {type: Seq.STRING, validate:{
-      notNull:false,
-      isAlphanumeric:true
-		}},
-		description: {type: Seq.TEXT, validate:{
       isAlphanumeric:true
 		}}
 	},
